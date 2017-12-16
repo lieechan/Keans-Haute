@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: #484848; }
+
+p {
+  text-align: justify; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif; }
+
+:focus {
+  outline: 1px dashed red; }
+
+/* HEADER SECTION */
+.barra-atalhos {
+  background: #84AC67;
+  box-sizing: border-box;
+  padding: .5em 8em;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .barra-atalhos a {
+    color: #fff;
+    font-size: 0.8125em; }
+  .barra-atalhos ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row; }
+  .barra-atalhos li {
+    margin: 0 .5em; }
+
+nav {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 5px solid #84AC67;
+  padding: 0.5em 8em;
+  box-sizing: border-box;
+  align-items: center; }
+  nav ul {
+    font-family: "Playfair Display", serif;
+    color: #636363;
+    list-style: none;
+    display: flex;
+    flex-direction: row; }
+  nav li {
+    margin-left: 1em; }
+  nav li:first-child {
+    margin-left: 0; }
+  nav a {
+    color: #636363;
+    text-decoration: none;
+    font-weight: 400; }
+    nav a:hover, nav a:focus {
+      box-shadow: 0 3px 0 #84AC67;
+      -webkit-box-shadow: 0 3px 0 #84AC67;
+      -moz-box-shadow: 0 3px 0 #84AC67; }
+
+.destaque {
+  width: 100%;
+  height: 60vh;
+  color: #f9f9f9;
+  background: #84AC67;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 2em 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.titulo-destaque, .texto-destaque {
+  color: #fff; }
+
+.saiba-mais-destaque {
+  font-size: .9em;
+  padding: 1em;
+  border: 0;
+  margin-top: 1em;
+  box-sizing: border-box;
+  background: #F8CED2;
+  color: #484848;
+  align-self: flex-start;
+  text-decoration: none;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .saiba-mais-destaque:hover {
+    background: #f5b8be; }
+
+/* NOTICIAS, PAGE E POSTS */
+.noticias, .flores, .midias, .page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 8em;
+  box-sizing: border-box; }
+
+.noticias-titulo, .midias-titulo {
+  color: #84AC67;
+  margin-bottom: 1em; }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.post-info {
+  font-size: 0.8125em;
+  margin-top: -12px;
+  margin-bottom: 12px; }
+
+.resumo, .instagram, .facebook, .youtube {
+  width: 31%;
+  margin-bottom: 1.5em; }
+
+.saiba-mais {
+  color: #84AC67;
+  box-shadow: 0 3px 0 #84AC67;
+  -webkit-box-shadow: 0 3px 0 #84AC67;
+  -moz-box-shadow: 0 3px 0 #84AC67;
+  text-decoration: none; }
+  .saiba-mais::after {
+    font-family: FontAwesome;
+    content: " \f08e"; }
+
+.missao, .visao, .valores {
+  width: 31%;
+  margin: 1.5em 0; }
+  .missao p, .visao p, .valores p {
+    text-align: center; }
+
+.titulo-missao {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1em; }
+
+.mais-noticias {
+  font-size: .9em;
+  padding: 1em;
+  border: 0;
+  margin-top: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  background: #84AC67;
+  align-self: center;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .mais-noticias a {
+    color: #fff;
+    text-decoration: none; }
+  .mais-noticias:hover {
+    background: #91b577; }
+
+.page-title {
+  width: 100%;
+  height: 20vh;
+  color: #fff;
+  background: #84AC67;
+  box-sizing: border-box;
+  padding: 2em 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.page-title h2 {
+  color: #fff; }
+
+.post-completo {
+  width: 62%; }
+
+sidebar {
+  width: 35%; }
+
+.widget-title {
+  margin-bottom: .5em; }
+  .widget-title::after {
+    content: "";
+    display: block;
+    width: 4em;
+    height: 3px;
+    background: #84AC67; }
+
+/* floresS */
+.flores {
+  background: #84AC67; }
+
+.flores-titulo {
+  color: #F8CED2;
+  margin-bottom: 1em; }
+
+.flores-nome {
+  color: #F8CED2;
+  margin-bottom: 1em; }
+
+.flores-info {
+  width: 23%;
+  padding: 1em;
+  word-wrap: break-word;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  background: #F8CED2; }
+
+.mais-flores {
+  font-size: .9em;
+  padding: 1em;
+  border: 0;
+  margin-top: 1em;
+  box-sizing: border-box;
+  background: #F8CED2;
+  color: #484848;
+  align-self: center;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .mais-flores a {
+    color: #484848;
+    text-decoration: none; }
+  .mais-flores:hover {
+    background: #f5b8be; }
+
+/* MIDIAS */
+footer {
+  width: 100%;
+  background: #84AC67;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2em 8em;
+  flex-wrap: wrap; }
+
+.copyright, .desenvolvido {
+  color: #fff; }
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 0.83em 4em;
+    box-sizing: border-box; }
+
+  .destaque {
+    padding: 0.83em 4em; }
+
+  .noticias, .flores, .midias, .page {
+    padding: 0.83em 4em 2em 4em; }
+
+  .wrapper {
+    flex-wrap: wrap; }
+
+  .resumo, .instagram, .facebook, .youtube, .instagram, .facebook, .youtube {
+    width: 48%; }
+
+  .flores {
+    padding: 0.83em 4em 2em 4em; }
+
+  .medias {
+    padding: 0.83em 4em 2em 4em; } }
+@media (max-width: 880px) {
+  nav {
+    padding: 0.83em 1em;
+    box-sizing: border-box;
+    flex-direction: column; }
+    nav ul {
+      width: 100%;
+      justify-content: center; }
+    nav .brand {
+      width: 100%;
+      margin-bottom: 1em;
+      text-align: center; }
+
+  .flores-info {
+    width: 31%; }
+
+  footer {
+    padding: 0.83em 4em 2em 4em; } }
+@media (max-width: 820px) {
+  .flores-info {
+    width: 48%; } }
+@media (max-width: 750px) {
+  .wrapper {
+    flex-wrap: wrap; }
+
+  .post-completo, sidebar {
+    width: 100%; }
+
+  .post-completo {
+    margin-bottom: 3em; }
+
+  .resumo, .instagram, .facebook, .youtube, .instagram, .facebook, .youtube {
+    width: 100%; }
+
+  .missao, .visao, .valores {
+    width: 100%; }
+
+  .copyright, .desenvolvido {
+    width: 100%; } }
+@media (max-width: 590px) {
+  .flores-info {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

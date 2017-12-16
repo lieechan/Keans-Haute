@@ -1,0 +1,360 @@
+$primary-color: #84AC67 ;
+$second-color: #F8CED2;
+$gray: #636363;
+$black: #484848;
+$white: #fff;
+
+$primary-font: 'Playfair Display', serif;
+$second-font: 'Raleway', sans-serif;
+
+
+$pattern-padding: 2em 8em;
+$second-padding: 0.83em 4em 2em 4em;
+*{
+	padding: 0;
+	margin: 0;
+    font-family: $second-font;
+    color: $black;
+}
+p{
+    text-align: justify;
+}
+img{
+	max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $primary-font;
+}
+@mixin button{
+    font-size: .9em;
+    padding: 1em;
+    border: 0;
+    margin-top: 1em;
+    box-sizing: border-box;
+}
+@mixin transition{
+    -webkit-transition:	all .3s linear;
+	-moz-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}
+:focus {
+    outline: 1px dashed red;
+}
+/* HEADER SECTION */
+.barra-atalhos{
+    background:$primary-color;
+    box-sizing: border-box;
+    padding: .5em 8em;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+        color: $white;
+        font-size: ((1/16)*13em);
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    li{
+        margin: 0 .5em;
+    }
+}
+nav {
+    width: 100%;
+    background: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top:5px solid $primary-color;
+    padding: 0.5em 8em;
+    box-sizing: border-box;
+    align-items: center;
+    ul {
+        font-family: $primary-font;
+        color: $gray;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    li {
+        margin-left:1em;
+    }
+    li:first-child {
+        margin-left:0;
+    }
+    a{
+        color: $gray;
+        text-decoration: none;
+        font-weight: 400;
+        &:hover,&:focus{
+            box-shadow:0 3px 0 $primary-color;
+            -webkit-box-shadow: 0 3px 0 $primary-color;
+            -moz-box-shadow: 0 3px 0 $primary-color;
+        }
+    }
+}
+.destaque {
+    width: 100%;
+    height: 60vh;
+    color: #f9f9f9;
+    background: $primary-color;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: $pattern-padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo-destaque,.texto-destaque{
+    color: $white;
+}
+.saiba-mais-destaque{
+    @include button;
+    background: $second-color;
+    color:$black;
+    align-self: flex-start;
+    text-decoration: none;
+    @include transition;
+    &:hover{
+        background: darken($second-color,5%);
+        //color: $white;
+    }
+}
+/* NOTICIAS, PAGE E POSTS */
+.noticias,.page{
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+	padding: $pattern-padding;
+	box-sizing:border-box;
+}
+.noticias-titulo{
+	color: $primary-color;
+	margin-bottom:1em;
+}
+.wrapper{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.post-info{
+    font-size: (1/16)*13em;
+    margin-top: -12px;
+    margin-bottom: 12px;
+}
+.resumo{
+	width: 31%;
+	margin-bottom:1.5em;
+}
+.saiba-mais{
+    color: $primary-color;
+    box-shadow:0 3px 0 $primary-color;
+    -webkit-box-shadow: 0 3px 0 $primary-color;
+    -moz-box-shadow: 0 3px 0 $primary-color;
+    text-decoration:none;
+    &::after{
+        font-family: FontAwesome;
+        content: " \f08e";
+    }
+}
+.missao,.visao,.valores{
+    width: 31%;
+	margin:1.5em 0;
+    p{
+	    text-align: center;
+    }
+}
+.titulo-missao{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.mais-noticias{
+	@include button;
+    color: $white;
+    background: $primary-color;
+    align-self: center;
+    @include transition;
+    a {
+        color:$white;
+        text-decoration: none;
+        
+    }
+    &:hover{
+        background: lighten($primary-color,5%);
+    }
+}
+.page-title{
+	width: 100%;
+    height: 20vh;
+    color: $white;
+    background: $primary-color;
+    box-sizing: border-box;
+    padding: $pattern-padding;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+.page-title h2{
+    color: $white;
+}
+.post-completo{
+	width: 62%;
+}
+sidebar{
+	width: 35%;
+}
+.widget-title{
+    margin-bottom: .5em;
+    &::after{
+        content: "";
+        display: block;
+        width: 4em;
+        height: 3px;
+        background: $primary-color;
+    }
+}
+/* floresS */
+.flores{
+    @extend .noticias;
+	background: $primary-color;
+}
+.flores-titulo{
+	color: $second-color;
+	margin-bottom:1em;
+}
+.flores-nome{
+	color:$second-color;
+	margin-bottom:1em;
+}
+.flores-info{
+	width: 23%;
+	
+	padding: 1em;
+    word-wrap: break-word;
+	margin-bottom:1.5em;
+	box-sizing: border-box;
+	background: $second-color;
+}
+.mais-flores{
+    @include button;
+    background: $second-color;
+    color: $black;
+    align-self: center;
+    @include transition;
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+    &:hover{
+        background: darken($second-color, 5%)
+    }
+}
+/* MIDIAS */
+.midias{
+    @extend .noticias;
+}
+.midias-titulo{
+    @extend .noticias-titulo;
+}
+.instagram,.facebook,.youtube {
+    @extend .resumo;
+}
+footer{
+	width: 100%;
+	background: $primary-color;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: $pattern-padding;
+    flex-wrap: wrap;
+}
+.copyright,.desenvolvido{
+    color: $white;
+}
+
+@media (max-width: 1024px){
+    nav {
+        padding: 0.83em 4em;
+        box-sizing: border-box;
+    }
+    .destaque {
+        padding: 0.83em 4em;
+    }
+    .noticias,.page {
+        padding: $second-padding;
+    }
+    .wrapper {
+        flex-wrap: wrap;
+    }
+    .resumo,.instagram,.facebook,.youtube {
+        width: 48%;
+    }
+    .flores {
+        padding: $second-padding;
+    }
+    .medias {
+        padding: $second-padding;
+    }
+}
+@media (max-width:880px){
+    nav {
+        padding: 0.83em 1em;
+        box-sizing: border-box;
+        flex-direction: column;
+        ul {
+            width: 100%;
+            justify-content: center;
+        }
+        .brand {
+            width: 100%;
+            margin-bottom:1em;
+            text-align: center;
+        }
+    }
+    .flores-info {
+        width: 31%;
+    }
+    footer{
+        padding: $second-padding;
+    }
+}
+@media (max-width:820px){
+    .flores-info{
+        width: 48%;
+    }
+}
+@media (max-width: 750px){
+    .wrapper {
+        flex-wrap: wrap;
+    }
+    .post-completo, sidebar {
+        width: 100%;
+    }
+
+	.post-completo{
+		margin-bottom:3em;
+	}
+	.resumo,.instagram,.facebook,.youtube{
+		width: 100%;
+	}
+    .missao,.visao,.valores{
+        width: 100%;
+    }
+    .copyright,.desenvolvido{
+        width: 100%;
+    }
+}
+@media (max-width:590px){
+    .flores-info{
+        width: 100%;
+    }
+}
